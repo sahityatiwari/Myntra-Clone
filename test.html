@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar with Small List on Hover</title>
+<style>
+  /* CSS for the navbar */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    overflow: hidden;
+    color : white;
+  }
+
+  li {
+    float: left;
+    color: white;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: lightblue;
+  }
+
+  /* CSS for the small list on hover */
+  li:hover ul {
+    display: block;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  li:hover li {
+    float: none;
+    color : black;
+  }
+
+  li:hover li a {
+    padding: 12px 16px;
+  }
+
+  li:hover li a:hover {
+    background-color:white;
+  }
+
+  /* Hide the small list by default */
+  ul ul {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a>
+    <!-- Small list on hover -->
+    <ul>
+      <li><a href="#sports">Sports</a></li>
+      <li><a href="#entertainment">Entertainment</a></li>
+      <li><a href="#technology">Technology</a></li>
+    </ul>
+  </li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+</body>
+</html>
